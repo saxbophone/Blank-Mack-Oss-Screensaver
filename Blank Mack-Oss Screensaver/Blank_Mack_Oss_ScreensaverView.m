@@ -36,6 +36,12 @@
 
 - (void)animateOneFrame
 {
+    /*
+     * simple "show that we are doing something" drawing code
+     * -- fill screen with white
+     */
+    [[NSColor whiteColor] setFill];
+    NSRectFill(self.bounds);
     return;
 }
 
