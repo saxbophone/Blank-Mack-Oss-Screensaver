@@ -145,16 +145,10 @@ ${RESOURCES}
 )
 
 if (APPLE)
-   set_target_properties( Blank-Mack-Oss-Screensaver PROPERTIES
-BUNDLE TRUE
-BUNDLE_EXTENSION "saver"
-MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Blank Mack-Oss Screensaver/Info.plist"
-)
-endif()
-
-if (APPLE)
-   set_target_properties( Blank-Mack-Oss-Screensaver PROPERTIES
-BUNDLE_EXTENSION "saver"
-MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Blank Mack-Oss Screensaver/Info.plist"
-)
+   set_target_properties(
+      Blank-Mack-Oss-Screensaver PROPERTIES
+      BUNDLE TRUE
+      BUNDLE_EXTENSION "saver"
+      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Blank Mack-Oss Screensaver/Info.plist"
+   )
 endif()
