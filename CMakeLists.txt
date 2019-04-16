@@ -4,10 +4,10 @@
 #
 # NOTE: AppKit and Screensaver Frameworks had to be manually added to the build dependencies.
 # I do not know why this is but mulle-xcode-to-cmake did not seem to detect them.
+cmake_minimum_required (VERSION 3.0)
 
-project("Blank Mack-Oss Screensaver")
+project("Blank Mack-Oss Screensaver" VERSION 1.0.0)
 
-cmake_minimum_required (VERSION 3.4)
 
 #
 # mulle-bootstrap environment
