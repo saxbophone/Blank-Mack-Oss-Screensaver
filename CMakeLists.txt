@@ -1,8 +1,11 @@
-# Generated on 2019-4-16 1:50:56 by version CURRENT_PROJECT_VERSION of mulle-xcode-to-cmake
+# Generated on 2019-4-16 1:55:51 by version CURRENT_PROJECT_VERSION of mulle-xcode-to-cmake
 # Command line:
 #    mulle-xcode-to-cmake export Blank Mack-Oss Screensaver.xcodeproj/
+#
+# NOTE: AppKit and Screensaver Frameworks had to be manually added to the build dependencies.
+# I do not know why this is but mulle-xcode-to-cmake did not seem to detect them.
 
-project( Blank Mack-Oss Screensaver)
+project("Blank Mack-Oss Screensaver")
 
 cmake_minimum_required (VERSION 3.4)
 
@@ -94,9 +97,16 @@ set( STATIC_DEPENDENCIES
 
 find_library( FOUNDATION_LIBRARY Foundation)
 message( STATUS "FOUNDATION_LIBRARY is ${FOUNDATION_LIBRARY}")
+# NOTE: AppKit is only required if using NSColor, NSRectFill(), etc...
+find_library( APPKIT_LIBRARY AppKit)
+message( STATUS "APPKIT_LIBRARY is ${APPKIT_LIBRARY}")
+find_library( SCREENSAVER_LIBRARY Screensaver)
+message( STATUS "SCREENSAVER_LIBRARY is ${SCREENSAVER_LIBRARY}")
 
 set( DEPENDENCIES
 ${FOUNDATION_LIBRARY}
+${APPKIT_LIBRARY}
+${SCREENSAVER_LIBRARY}
 )
 
 set( RESOURCES
