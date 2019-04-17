@@ -1,5 +1,5 @@
 # ignore everything in the build folder
-build
+build/*
 # explicitly allow the .gitkeep file in the build directory
 !build/.gitkeep
 .DS_Store
